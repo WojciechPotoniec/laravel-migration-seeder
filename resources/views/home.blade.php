@@ -16,19 +16,20 @@
 </head>
 
 <body>
-    <h1>Itinerari Treni</h1>
-    @foreach ($trains as $train)
-
-        <h2>{{ $train->azienda }}</h2>
-        <h3>{{ $train->stazione_di_partenza }}</h3>
-        <h3>{{ $train->staizone_di_arrivo }}</h3>
-        <div>{{ $train->orario_di_partenza }}</div>
-        <div>{{ $train->orario_di_arrivo }}</div>
-        <div>{{ $train->codice_treno }}</div>
-        <div>{{ $train->numero_carrozze }}</div>
+    <div class="container">
+        <h1 class="text-center">Itinerari Treni</h1>
+        @foreach ($trains as $train)
+        <h2>Azienda: {{ $train->azienda }}</h2>
+        <h3>Stazione di partenza: {{ $train->stazione_di_partenza }}</h3>
+        <h3>Stazione di arrivo: {{ $train->stazione_di_arrivo }}</h3>
+        <div>Orario di partenza: {{ $train->orario_di_partenza }}</div>
+        <div>Orario di arrivo: {{ $train->orario_di_arrivo }}</div>
+        <div>Codice treno: {{ $train->codice_treno }}</div>
+        <div>Numero carrozze: {{ $train->numero_carrozze }}</div>
         <div>{{ $train->in_orario }}</div>
         <div>{{ $train->cancellato }}</div>
-    @endforeach
+        @endforeach
+    </div>
 </body>
 
 </html>
